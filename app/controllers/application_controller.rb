@@ -5,13 +5,13 @@ class ApplicationController < ActionController::Base
     post_images_path
   end
   
-  def after_sign_aut_path_for(resource)
+  def after_sign_out_path_for(resource)
     about_path
   end
   
   protected
   
   def configure_permitted_parameters
-    devise_parameter_sanitizer .permit(:sign_up, keys: [:name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
   end
 end
